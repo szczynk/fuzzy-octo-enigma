@@ -1,0 +1,85 @@
+    Study Program (1) ----< Course (Many)
+    Student (Many) ----< Course (Many) >---- Lecturer (Many)
+    Faculty (1) ----< Study Program (Many)
+
+Study Program API:
+
+    Get a list of all study programs: GET /study-programs
+    Get details of a specific study program by ID: GET /study-programs/{id}
+    Create a new study program: POST /study-programs
+    Update details of a study program by ID: PUT /study-programs/{id}
+    Delete a study program by ID: DELETE /study-programs/{id}
+
+    Get the list of courses offered by a specific study program: GET /study-programs/{id}/courses
+    Get the faculty associated with a specific study program: GET /study-programs/{id}/faculty
+
+Course API:
+
+    Get a list of all courses: GET /courses
+    Get details of a specific course by ID: GET /courses/{id}
+    Update details of a course by ID: PUT /courses/{id}
+    Delete a course by ID: DELETE /courses/{id}
+
+    Get the list of students enrolled in a specific course: GET /courses/{id}/students
+    Get the list of lecturers teaching a specific course: GET /courses/{id}/lecturers
+    Get the study program to which a course belongs: GET /courses/{id}/study-program
+
+    Create a new course for a specific study program: POST /study-programs/{id}/courses
+
+Student API:
+
+    Get a list of all students: GET /students
+    Get details of a specific student by ID: GET /students/{id}
+    Create a new student: POST /students
+    Update details of a student by ID: PUT /students/{id}
+    Delete a student by ID: DELETE /students/{id}
+
+    Get the list of courses in which a specific student is enrolled: GET /students/{id}/courses
+
+Lecturer API:
+
+    Get a list of all lecturers: GET /lecturers
+    Get details of a specific lecturer by ID: GET /lecturers/{id}
+    Create a new lecturer: POST /lecturers
+    Update details of a lecturer by ID: PUT /lecturers/{id}
+    Delete a lecturer by ID: DELETE /lecturers/{id}
+
+    Get the list of courses taught by a specific lecturer: GET /lecturers/{id}/courses
+
+Faculty API:
+
+    Get a list of all faculties: GET /faculties
+    Get details of a specific faculty by ID: GET /faculties/{id}
+    Create a new faculty: POST /faculties
+    Update details of a faculty by ID: PUT /faculties/{id}
+    Delete a faculty by ID: DELETE /faculties/{id}
+
+    Get the list of study programs offered by a specific faculty: GET /faculties/{id}/study-programs
+
+Enrollment and Assignment Endpoints (to manage many-to-many relationships):
+
+    Enroll a student in a course: POST /courses/{courseId}/students/{studentId}
+    Assign a lecturer to a course: POST /courses/{courseId}/lecturers/{lecturerId}
+    Remove a student from a course: DELETE /courses/{courseId}/students/{studentId}
+    Remove a lecturer from a course: DELETE /courses/{courseId}/lecturers/{lecturerId}
+
+This comprehensive list of endpoints should provide a clear and organized structure for your academic system's RESTful API, covering both data retrieval and manipulation operations.
+
+
+
+
+live coding
+
+ryan, lead software architect
+
+bryan, lead java
+
+cindy
+
+kemeja
+
+mobbi, nama ptnya astra digital mobil, basisnya aplikasi jual beli mobil bekas
+
+
+
+
